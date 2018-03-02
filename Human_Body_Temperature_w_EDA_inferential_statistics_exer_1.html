@@ -14323,7 +14323,7 @@ p-value:  2.41063204156e-07
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[132]:</div>
+<div class="prompt input_prompt">In&nbsp;[148]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># calc z-statistic &amp; p-value</span>
@@ -14382,7 +14382,7 @@ p-value:  4.35231516588e-08
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[133]:</div>
+<div class="prompt input_prompt">In&nbsp;[155]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#create random small samle set</span>
@@ -14410,9 +14410,9 @@ p-value:  4.35231516588e-08
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>small sample: [ 98.7  97.9  99.4  99.1  99.   98.4  99.2  98.   98.   98.4]
-t-statistic:  0.0576390417705 
-p-value:  0.955295581645
+<pre>small sample: [ 98.9  97.2  98.   99.1  96.8  98.6  97.6  98.2  99.3  98.8]
+t-statistic:  -1.31610365456 
+p-value:  0.220671672742
 </pre>
 </div>
 </div>
@@ -14423,7 +14423,7 @@ p-value:  0.955295581645
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[134]:</div>
+<div class="prompt input_prompt">In&nbsp;[151]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># confidence level 95%</span>
@@ -14431,8 +14431,8 @@ p-value:  0.955295581645
 
 <span class="c1"># find range of t-statistic for given confidence level and degrees of freedom</span>
 <span class="nb">print</span><span class="p">((</span><span class="mi">1</span><span class="o">-</span><span class="n">conf_level</span><span class="o">*</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="mi">100</span><span class="p">,</span><span class="s2">&quot;</span><span class="si">% c</span><span class="s2">onfidence, t-statistic range:&quot;</span><span class="p">,</span> <span class="n">stats</span><span class="o">.</span><span class="n">t</span><span class="o">.</span><span class="n">ppf</span><span class="p">(</span><span class="n">q</span><span class="o">=</span><span class="n">conf_level</span><span class="p">,</span> <span class="n">df</span><span class="o">=</span><span class="n">small_sample_size</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span> <span class="s2">&quot;to&quot;</span><span class="p">,</span>
-      <span class="n">stats</span><span class="o">.</span><span class="n">t</span><span class="o">.</span><span class="n">ppf</span><span class="p">((</span><span class="mi">1</span><span class="o">-</span><span class="n">conf_level</span><span class="p">),</span> <span class="n">df</span><span class="o">=</span><span class="n">small_sample_size</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span>
-     <span class="p">)</span>
+      <span class="n">stats</span><span class="o">.</span><span class="n">t</span><span class="o">.</span><span class="n">ppf</span><span class="p">(</span><span class="n">q</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">conf_level</span><span class="p">),</span> <span class="n">df</span><span class="o">=</span><span class="n">small_sample_size</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="p">)</span>
+
 <span class="c1"># confidence level 99.9%</span>
 <span class="n">conf_level</span><span class="o">=</span> <span class="mf">0.001</span><span class="o">/</span><span class="mi">2</span>
 
@@ -14468,7 +14468,7 @@ p-value:  0.955295581645
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[135]:</div>
+<div class="prompt input_prompt">In&nbsp;[149]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># calc z-statistic (with estimated population std) &amp; p-value</span>
@@ -14506,7 +14506,7 @@ p-value:  1.04844717214
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The sample of 10's t-statistics falls outside the range with a 95% confidence level. While t-statistic is within the range at 99.9%, it is hard to have a 99.9% confidence with such a small sample size. The t and z statistic values are slightly different, but their p-values are very different. It show how the z-statistic diverges from the t-statistic with sample sizes under 30.</p>
+<p>The sample of 10's t-statistics falls outside the range with a 95% confidence level. While t-statistic is within the range at 99.9%, it is hard to have a 99.9% confidence with such a small sample size. The t and z statistic values are  different, but their p-values are very different. It show how the z-statistic diverges from the t-statistic with sample sizes under 30.</p>
 
 </div>
 </div>
@@ -14524,7 +14524,7 @@ p-value:  1.04844717214
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[136]:</div>
+<div class="prompt input_prompt">In&nbsp;[167]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># get z critical value at 95% (2.5% to 97.5%)</span>
@@ -14532,18 +14532,22 @@ p-value:  1.04844717214
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The z critical at 95%:&quot;</span><span class="p">,</span><span class="n">z_crit</span><span class="p">)</span>
 
 <span class="c1"># calc margin of error</span>
-<span class="n">margin_err</span> <span class="o">=</span> <span class="n">z_crit</span> <span class="o">*</span> <span class="n">sample_std</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">sample_size</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The marginof error on the mean temperature:&quot;</span><span class="p">,</span> <span class="n">margin_err</span><span class="p">)</span>
+<span class="n">margin_err</span> <span class="o">=</span> <span class="n">z_crit</span> <span class="o">*</span> <span class="p">(</span><span class="n">sample_std</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">sample_size</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The marginof error on the sample mean temperature:&quot;</span><span class="p">,</span> <span class="n">margin_err</span><span class="p">,</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
 
 <span class="c1"># 95% confidence interval</span>
 <span class="n">conf_low</span><span class="p">,</span> <span class="n">conf_high</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">temperature</span><span class="p">,</span> <span class="p">[</span><span class="mf">2.5</span><span class="p">,</span> <span class="mf">97.5</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The 95% Confidence Interval:&#39;</span><span class="p">,</span> <span class="n">conf_low</span><span class="p">,</span> <span class="s1">&#39;to&#39;</span><span class="p">,</span> <span class="n">conf_low</span><span class="p">,</span> <span class="s2">&quot;F</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The 95% Confidence Interval Mean:&#39;</span><span class="p">,</span> <span class="n">conf_low</span><span class="p">,</span> <span class="s1">&#39;to&#39;</span><span class="p">,</span> <span class="n">conf_high</span><span class="p">,</span> <span class="s2">&quot;F&quot;</span><span class="p">)</span>
+
+<span class="c1"># 99% confidence interval</span>
+<span class="n">conf_low</span><span class="p">,</span> <span class="n">conf_high</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">temperature</span><span class="p">,</span> <span class="p">[</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">99.5</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The 99% Confidence Interval Mean:&#39;</span><span class="p">,</span> <span class="n">conf_low</span><span class="p">,</span> <span class="s1">&#39;to&#39;</span><span class="p">,</span> <span class="n">conf_high</span><span class="p">,</span> <span class="s2">&quot;F</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
 
 <span class="c1"># 95% prediction Interval</span>
 <span class="n">predict_interval</span> <span class="o">=</span> <span class="n">z_crit</span> <span class="o">*</span> <span class="n">sample_std</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The 95% Prediction Interval:&#39;</span><span class="p">,</span><span class="n">sample_mean</span> <span class="o">-</span> <span class="n">predict_interval</span><span class="p">,</span> <span class="s1">&#39;to&#39;</span><span class="p">,</span> <span class="n">sample_mean</span> <span class="o">+</span> <span class="n">predict_interval</span><span class="p">)</span>
 
-<span class="c1">#check 95% prediction interval</span>
+<span class="c1">#check 95% prediction Interval 2</span>
 <span class="n">check_low</span><span class="p">,</span> <span class="n">check_high</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">norm</span><span class="o">.</span><span class="n">interval</span><span class="p">(</span><span class="mf">0.95</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="n">sample_mean</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="n">sample_std</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Normal temperatures between&#39;</span><span class="p">,</span> <span class="n">check_low</span><span class="p">,</span> <span class="s1">&#39;and&#39;</span><span class="p">,</span> <span class="n">check_high</span><span class="p">)</span>
 </pre></div>
@@ -14563,8 +14567,10 @@ p-value:  1.04844717214
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>The z critical at 95%: 1.95996398454
-The marginof error on the mean temperature: 0.125548657774
-The 95% Confidence Interval: 96.7225 to 96.7225 F
+The marginof error on the sample mean temperature: 0.125548657774 
+
+The 95% Confidence Interval Mean: 96.7225 to 99.4775 F
+The 99% Confidence Interval Mean: 96.3645 to 100.284 F
 
 The 95% Prediction Interval: 96.8177558267 to 99.6807057117
 Normal temperatures between 96.8177558267 and 99.6807057117
@@ -15452,11 +15458,78 @@ Name: temperature, dtype: float64</pre>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>So, after removing 3 highend temperature outliers (temperatures above 99.6$^{\circ}$F) the Female mean is still 0.3$^{/circ}$F warmer then Males in this dataset. Note that the Male temperture were allunder this cap. Plus, if we cut the lower outliers, the two pairs of temperatures are one Female and one Male, so equal effect on both.  Additional statistical ananlysis will help to determine if the difference is significant.</p>
+<p>So, after removing 3 highend temperature outliers (temperatures above 99.6$^{\circ}$F) the Female mean is still 0.3$^{/circ}$F warmer then Males in this dataset. Note that the Male temperture were all under this 99.6$^{\circ}$F cap. Plus, if we cut the lower 4 outliers, the two pairs of temperatures are one Female and one Male, so equal effect on both. There is a statistical difference between Female and Male means. Additional statistical ananlysis will help to determine if the difference is significant.</p>
 <p><strong>Null Hypothesis:</strong> There is no significant difference between Female and Male normal body temperature.</p>
+<p>H$_0$ = ${\mu}_{Female}$ - ${\mu}_{Male}$ = 0</p>
 
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[144]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[144]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0.064056614695193359</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[160]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">z_crit</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[160]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>1.6448536269514722</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -15471,24 +15544,14 @@ Name: temperature, dtype: float64</pre>
 </div>
 
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[140]:</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## step plot of temperature at 40 bins</span>
-<span class="c1">#sns.set()</span>
-<span class="c1">#_ = plt.hist(df.temperature,bins=40)</span>
-<span class="c1">#_ = plt.title(&#39;Body Temperature (40 bins)&#39;, fontsize=16)</span>
-<span class="c1">#_ = plt.xlabel(&#39;temperature ($^\circ$F)&#39;, fontsize=14)</span>
-<span class="c1">#_ = plt.ylabel(&#39;count&#39;, fontsize=14)</span>
-<span class="c1">#plt.show()</span>
-</pre></div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The mean normal body temperature was held to be 37$^{\circ}$C or 98.6$^{\circ}$F for more than 120 years since it was first conceptualized and reported by Carl Wunderlich in a famous 1868 book.  The mean normal body temperature was computed with 95% confidence to be between 96.72$^{\circ}$F to 99.48$^{\circ}$F. There is also a statistically significant difference in the means between males and females.</p>
 
 </div>
 </div>
-</div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
